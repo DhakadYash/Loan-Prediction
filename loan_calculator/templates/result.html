@@ -1,0 +1,30 @@
+{% extends "main.html" %}
+
+{% block title %}
+    <title>loan approval system</title>
+    {% load static %}
+    <link href="{% static 'result.css' %}" rel='stylesheet' class='css'>
+    <script>
+        function showMessage(condition) {
+          if (1==condition) {
+            document.getElementById("message").innerHTML = "<h1>Congratulations! You are eligible to get the loan</h1>";
+          } else {
+            document.getElementById("message").innerHTML = "Sorry! You are not eligible to get the loan";
+          }
+        }
+      </script>
+{% endblock title %}
+
+{% block top %}
+<div id="message"></div>
+<script>
+    // Example usage:
+    var myCondition = {{nba}}; // Replace this with your condition
+    showMessage(myCondition);
+</script>
+{{rfa}}
+{{nba}}
+{{dta}}
+<br>
+<img src="{% static 'images/library logo.jpg' %}">
+{% endblock top %}

@@ -1,0 +1,89 @@
+body {
+    background-image: url('images/money\ in\ hand.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+  }
+
+.form{
+    margin-top: 150px;
+    background-color: rgba(191, 218, 255, 0.468);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.658);
+    width: 480px;
+    padding: 50px 20px 30px 20px;
+    align-items:start;
+  }
+
+legend{
+    font-family: cursive;
+    font-size: 40px;
+    font-weight: bolder;
+    color: rgb(36, 22, 108);
+    margin-bottom: 20px;
+    margin-left: 125px;
+  }
+
+input{
+    margin-bottom: 8px;
+  }
+
+label{
+    color: rgb(89, 33, 187);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+  }
+
+.button{
+    display: block;
+    width: 100px;
+    height: 35px;
+    line-height: 25px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: #0b1eca;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    background: #ffffff;
+    letter-spacing: 0px;
+    text-align: center;
+    position: static;
+    transition: all .35s;
+    margin-left: 192px;
+    margin-top: 40px;
+  }
+  
+.button:hover{
+    display: block;
+    width: 100px;
+    height: 35px;
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #ffffff;
+    border: 2px solid #0d1291;
+    border-radius: 5px;
+    background: rgb(18, 16, 138);
+    letter-spacing: 0px;
+    text-align: center;
+    position:static;
+    transition: all .35s;
+  }
+
+  table{
+    margin-left: 9px;
+  }
+
+  table td{
+    margin-bottom: 20px;
+  }

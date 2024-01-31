@@ -1,0 +1,126 @@
+{% extends 'main.html' %}
+
+{% block title %}
+{% load static %}
+<title>signup/Zero</title>
+<link href="{% static 'details.css' %}" rel='stylesheet' class='css'>
+{% endblock title %}
+
+{% block body %}
+<div class='form'>
+<form method='POST' action='result'>
+    {% csrf_token %}
+    
+    <legend>Fund Finder</legend>
+
+    <br>
+
+    <table>
+
+        <tr>
+            <td>
+                <label for='gender'>Gender : </label>
+            </td>
+            <td>
+                <select id='gender' name='gender'>
+                    <option value='Male'>Male</option>
+                    <option value='Female'>Female</option>
+                    <option value='Other'>Other</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for='mstatus'>Marital status :</label>
+            </td>
+            <td>
+                <select id='mstatus' name='mstatus'>
+                    <option value='Yes'>Married</option>
+                    <option value='No'>Unmarried</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+
+                <label for='dependents'>dependents :</label>
+            </td>
+            <td>
+                <input type='number' id='dependents' name='dependents'>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for='education'>Education :</label>
+            </td>
+            <td>
+                <select id='education' name='education'>
+                    <option value='Graduate'>Graduate</option>
+                    <option value='Not Graduate'>Not Graduate</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for='income'>Enter the Income of the applicant : </label>
+            </td>
+            <td>
+                <input type='number' id='income' name='income'>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for='cincome'>Enter the Income of Co-applicant : </label>
+            </td>
+            <td>
+                <input type='number' id='cincome' name='cincome'>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for='amount'>Enter the loan amount : <br>(in thousands)</label>
+            </td>
+            <td>
+                <input type='number' id='amount' name='amount'>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for='term'>Enter the loan term in months : </label>
+            </td>
+            <td>
+                <input type='number' id='term' name='term'>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for='chistory'>Credit History</label>
+            </td>
+            <td>
+                <input type='number' id='chistory' name='chistory' maximum=1>
+            </td>
+        </tr>
+
+        
+    </table>
+    
+    <input type='submit' value='Check now' class='button'>
+
+</form>
+
+<br>
+
+
+{% if error %}
+<h3> {{ error }} </h3>
+{% endif %}
+</div>
+{% endblock body %}
